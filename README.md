@@ -16,6 +16,12 @@
 *implementation of everyone's favorite program.*
 
 <br>
+<br>
+
+[![Button Discussions]][Discussions]
+
+<br>
+<br>
 
 [![Preview]][#]
 
@@ -33,6 +39,7 @@
 
 <!----------------------------------------------------------------------------->
 
+[Discussions]: https://github.com/orgs/EnterpriseSoftwareProjectsFoundation/discussions 'Where you can discuss this project.'
 [Deno]: https://deno.land/ 'The JavaScript runtime used for this project.'
 
 [Preview]: Assets/Preview.png
@@ -50,4 +57,5 @@
 
 <!---------------------------------[ Buttons ]--------------------------------->
 
+[Button Discussions]: https://img.shields.io/badge/Discussions-blue?style=for-the-badge&logoColor=white&logo=AskUbuntu
 [Button Pixels]: https://img.shields.io/badge/Pixels-EF2D5E?style=for-the-badge&logoColor=white&logo=ROS
