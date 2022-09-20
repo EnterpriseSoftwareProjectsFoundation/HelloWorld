@@ -32,8 +32,6 @@
 
 ## Features
 
-<br>
-
 -   **Auto Text Centering**
 
 -   **Custom Font**
