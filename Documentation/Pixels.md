@@ -41,6 +41,8 @@ characters from the **[Braille Patterns]**.
       converted following the table below.
 
 <br>
+<br>
+<br>
 
 | Braille | X | Y | | Braille | X | Y |
 |:-------:|:-:|:-:|-|:-------:|:-:|:-:|
