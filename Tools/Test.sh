@@ -1,6 +1,7 @@
 
 clear
 
-deno run            \
-    -A              \
+deno run                            \
+    -A                              \
+    --importmap=Source/Imports.json \
     Source/App.js

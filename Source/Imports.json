@@ -1,0 +1,9 @@
+{
+    "imports" : {
+        
+        "FileSystem" : "https://deno.land/std@0.156.0/fs/mod.ts" ,
+        "Path" : "https://deno.land/std@0.156.0/path/mod.ts" ,
+        
+        "Paths" : "./Paths.js"
+    }
+}
