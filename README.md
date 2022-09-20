@@ -18,7 +18,8 @@
 <br>
 <br>
 
-[![Button Discussions]][Discussions]
+[![Button Discussions]][Discussions]   
+[![Button Roadmap]][Roadmap]
 
 <br>
 <br>
@@ -42,6 +43,7 @@
 [Discussions]: https://github.com/orgs/EnterpriseSoftwareProjectsFoundation/discussions 'Where you can discuss this project.'
 [Deno]: https://deno.land/ 'The JavaScript runtime used for this project.'
 
+[Roadmap]: Documentation/Roadmap.md
 [Preview]: Assets/Preview.png
 [License]: LICENSE 'This project is licensed under AGPLv3'
 [Pixels]: Documentation/Pixels.md 'How pixels are rendered'
@@ -58,4 +60,5 @@
 <!---------------------------------[ Buttons ]--------------------------------->
 
 [Button Discussions]: https://img.shields.io/badge/Discussions-blue?style=for-the-badge&logoColor=white&logo=AskUbuntu
+[Button Roadmap]: https://img.shields.io/badge/Roadmap-00A98F?style=for-the-badge&logoColor=white&logo=GoogleMaps
 [Button Pixels]: https://img.shields.io/badge/Pixels-EF2D5E?style=for-the-badge&logoColor=white&logo=ROS
