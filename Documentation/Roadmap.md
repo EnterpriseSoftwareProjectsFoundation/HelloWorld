@@ -15,4 +15,6 @@
 
 -   Hello World cpu / simulated system
 
+-   Captchas
+
 <br>
