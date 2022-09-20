@@ -1,13 +1,12 @@
 
+import * as Braille from './Braille.js'
 import Font from './Font.js'
 
 
 const { log } = console;
 
 
-const pixels = Array(256)
-    .fill(null)
-    .map((_,index) => String.fromCodePoint(0x2800 + index));
+const pixels = [ ... Braille.symbols() ];
 
 
 export default class Canvas {
