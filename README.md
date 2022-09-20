@@ -10,7 +10,7 @@
 <br>
 <br>
 
-# Hello World
+# <img src = 'Assets/Header.png' width = 300>
 
 *An innovative, never finished, enterprise grade* <br>
 *implementation of everyone's favorite program.*
@@ -21,19 +21,16 @@
 [![Button Discussions]][Discussions]   
 [![Button Roadmap]][Roadmap]
 
-<br>
-<br>
-
-[![Preview]][#]
+</div>
 
 <br>
 <br>
 
 ## Documentation
 
-[![Button Pixels]][Pixels]
+<br>
 
-</div>
+[![Button Pixels]][Pixels]
 
 <br>
 
