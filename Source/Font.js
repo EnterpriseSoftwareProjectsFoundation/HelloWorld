@@ -11,7 +11,6 @@ const files = walk(Paths.font,{
     followSymlinks : false ,
     includeFiles : true ,
     includeDirs : false ,
-    maxDepth : 1 ,
     skip : [ /\/\Template\.txt$/ ]
 })
 
