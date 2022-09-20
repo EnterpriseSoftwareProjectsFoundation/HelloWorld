@@ -20,6 +20,8 @@
 [![Button Setup]][Setup]   
 [![Button Press Kit]][Press Kit]
 
+[![Button Documentation]][Documentation]
+
 [![Button Discussions]][Discussions]   
 [![Button Roadmap]][Roadmap]
 
@@ -28,12 +30,7 @@
 <br>
 <br>
 
-## Documentation
 
-<br>
-
-[![Button Pixels]][Pixels]   
-[![Button Font]][Font]
 
 <br>
 <br>
@@ -58,13 +55,12 @@
 [Deno]: https://deno.land/ 'The JavaScript runtime used for this project.'
 
 
+[Documentation]: Documentation/Overview.md
 [Press Kit]: Assets/Press%20Kit
 [Roadmap]: Documentation/Roadmap.md
 [Preview]: Assets/Preview.png
 [License]: LICENSE 'This project is licensed under AGPLv3'
-[Pixels]: Documentation/Pixels.md 'How pixels are rendered'
 [Setup]: Documentation/Setup.md
-[Font]: Documentation/Font.md
 
 [#]: #
 
@@ -77,9 +73,8 @@
 
 <!---------------------------------[ Buttons ]--------------------------------->
 
+[Button Documentation]: https://img.shields.io/badge/Documentation-FF4F8B?style=for-the-badge&logoColor=white&logo=BookStack
 [Button Discussions]: https://img.shields.io/badge/Discussions-blue?style=for-the-badge&logoColor=white&logo=PowerVirtualAgents
 [Button Press Kit]: https://img.shields.io/badge/Press_Kit-a5915f?style=for-the-badge&logoColor=white&logo=Photobucket
 [Button Roadmap]: https://img.shields.io/badge/Roadmap-00A98F?style=for-the-badge&logoColor=white&logo=GoogleMaps
-[Button Pixels]: https://img.shields.io/badge/Pixels-428813?style=for-the-badge&logoColor=white&logo=ROS
 [Button Setup]: https://img.shields.io/badge/Setup-7AB55C?style=for-the-badge&logoColor=white&logo=GitBook
-[Button Font]: https://img.shields.io/badge/Font-EF2D5E?style=for-the-badge&logoColor=white&logo=AdobeFonts
