@@ -36,9 +36,12 @@
 
 ## Inspiration
 
+<br>
+
+**@ [Kevlin Henney]**
+
 [<kbd> <br> I bet I could make this room develop a Hello World application the like <br> of which the world has never seen before and would never want to see. <br> </kbd>][Small Is Beautiful]
 
-\- **[Kevlin Henney]**
 
 <br>
 
