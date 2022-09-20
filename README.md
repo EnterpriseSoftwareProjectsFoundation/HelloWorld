@@ -32,12 +32,24 @@
 [![Button Pixels]][Pixels]
 
 <br>
+<br>
+
+## Inspiration
+
+[<kbd> <br> I bet I could make this room develop a Hello World application the like <br> of which the world has never seen before and would never want to see. <br> </kbd>][Small Is Beautiful]
+
+\- **[Kevlin Henney]**
+
+<br>
 
 
 <!----------------------------------------------------------------------------->
 
+[Small Is Beautiful]: https://www.youtube.com/watch?v=B3b4tremI5o
+[Kevlin Henney]: https://twitter.com/KevlinHenney
 [Discussions]: https://github.com/orgs/EnterpriseSoftwareProjectsFoundation/discussions 'Where you can discuss this project.'
 [Deno]: https://deno.land/ 'The JavaScript runtime used for this project.'
+
 
 [Roadmap]: Documentation/Roadmap.md
 [Preview]: Assets/Preview.png
