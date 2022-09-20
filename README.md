@@ -29,7 +29,8 @@
 
 <br>
 
-[![Button Pixels]][Pixels]
+[![Button Pixels]][Pixels]   
+[![Button Font]][Font]
 
 <br>
 <br>
@@ -58,6 +59,7 @@
 [Preview]: Assets/Preview.png
 [License]: LICENSE 'This project is licensed under AGPLv3'
 [Pixels]: Documentation/Pixels.md 'How pixels are rendered'
+[Font]: Documentation/Font.md
 
 [#]: #
 
@@ -72,4 +74,5 @@
 
 [Button Discussions]: https://img.shields.io/badge/Discussions-blue?style=for-the-badge&logoColor=white&logo=AskUbuntu
 [Button Roadmap]: https://img.shields.io/badge/Roadmap-00A98F?style=for-the-badge&logoColor=white&logo=GoogleMaps
-[Button Pixels]: https://img.shields.io/badge/Pixels-EF2D5E?style=for-the-badge&logoColor=white&logo=ROS
+[Button Pixels]: https://img.shields.io/badge/Pixels-428813?style=for-the-badge&logoColor=white&logo=ROS
+[Button Font]: https://img.shields.io/badge/Font-EF2D5E?style=for-the-badge&logoColor=white&logo=AdobeFonts
