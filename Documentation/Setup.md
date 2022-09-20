@@ -11,7 +11,9 @@
 
 -   Ensure **[Deno]** is installed.
 
--   Execute [`Tools/Test.sh`]
+    <br>
+
+-   Execute  [`Tools/Test.sh`]
 
 <br>
 <br>
@@ -19,6 +21,8 @@
 ## Permissions
 
 *You may need to give the script execution permissions.*
+
+<br>
 
 ```sh
 sudo chmod +x Tools/Test.sh
