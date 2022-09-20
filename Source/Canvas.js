@@ -2,8 +2,8 @@
 import Font from './Font.js'
 
 
-const { min , max , floor , round , abs } = Math;
 const { log } = console;
+
 
 const pixels = Array(256)
     .fill(null)
@@ -15,6 +15,7 @@ export default class Canvas {
     #height;
     #width;
     #data;
+    
     
     constructor ( width , height ){
         
@@ -30,6 +31,11 @@ export default class Canvas {
         this.clear();
     }
     
+    
+    /**
+     *  Generates an image frame in form of a string.
+     */
+    
     render (){
         
         let lines = '';
@@ -40,6 +46,7 @@ export default class Canvas {
 
         return lines;
     }
+    
     
     #renderBlock (x,y){
         
@@ -59,6 +66,11 @@ export default class Canvas {
     }
     
     
+    /** 
+     *  Sets a pixel to the given state.
+     *  @param state Wether the pixel is on.
+     */
+    
     pixel (x,y,state = true){
         
         if( x < 0 || y < 0 )
@@ -68,6 +80,10 @@ export default class Canvas {
             this.#data[y][x] = state;
     }
     
+    
+    /**
+     *  Resets all pixels.
+     */
     
     clear (){
         
@@ -81,21 +97,46 @@ export default class Canvas {
         });
     }
     
-    overlay (X,Y,pixels){
+    
+    /**
+     *  Overlay the given pixels onto the canvas.
+     *
+     *  Ignores out-of-bounds content.
+     *
+     *  @param X Left side of the content.
+     *  @param Y  Top side of the content.
+     *  @param pixels 2D array of [ 0 | 1 ]
+     */
+    
+    overlay ( X , Y , pixels ){
         
-        const { length : height } = pixels;
+        const
+            height = pixels.length ,
+            width = pixels[0]?.length ?? 0 ;
         
         for(let y = 0;y < height;y++){
             
             const line = pixels[y];
-            const { length : width } = line ;
                 
             for(let x = 0;x < width;x++)
                 this.pixel(X + x,Y + y,line[x]);
         }
     }
     
-    text (x,y,text){
+    
+    /**
+     *  Write the given text.
+     *
+     *  Ignores out-of-bounds content.
+     *  Replaces chars without representation with spaces.
+     *  Spaces chars with a 2 pixel padding.
+     *
+     *  @param x Left side of the text.
+     *  @param y  Top side of the text.
+     *  @param text String to be displayed.
+     */
+    
+    text ( x , y , text ){
         
         const chars = text
             .split('')

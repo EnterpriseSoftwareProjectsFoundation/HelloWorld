@@ -8,7 +8,6 @@
 [![Badge Deno]][Deno]
 
 <br>
-<br>
 
 # <img src = 'Assets/Header.png' width = 300>
 
