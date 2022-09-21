@@ -18,21 +18,38 @@ const files = walk(Paths.font,{
 const font = {};
 
 
-for await (const { path } of files){
+for await (const { path } of files)
+    await loadChar(path);
+
+
+function charName ( path ){
+    return basename(path)
+        .split('.')[0];
+}
+
+
+async function loadChar ( path ){
 
     const data = await readTextFile(path);
 
-    const pixels = data
-        .split('\n')
-        .map((line) => line.split(''))
-        .map((chars) => chars
-            .map((char) => char === '●')
-            .map((filled) => filled ? 1 : 0))
-
-    const name = basename(path)
-        .split('.')[0];
+    const
+        pixels = readChar(data) ,
+        name = charName(path) ;
 
     font[name] = pixels;
+}
+
+
+function readChar ( string ){
+
+    const convert = (chars) => chars
+        .map((char) => char === '●')
+        .map((filled) => filled ? 1 : 0);
+
+    return string
+        .split('\n')
+        .map((line) => line.split(''))
+        .map(convert);
 }
 
 

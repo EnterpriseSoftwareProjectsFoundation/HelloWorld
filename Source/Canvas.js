@@ -1,13 +1,12 @@
 
 import { charOffsets , asPixels } from './Text.js'
 import * as Braille from './Braille.js'
+import { combine } from './Generator.js'
+import * as Grid from './Grid.js'
 
 
 const { floor } = Math;
 const { log } = console;
-
-
-const pixels = [ ... Braille.symbols() ];
 
 
 export default class Canvas {
@@ -38,31 +37,18 @@ export default class Canvas {
 
     render (){
 
+        const
+            height = this.#height ,
+            width = this.#width ,
+            data = this.#data ;
+
         let lines = '';
 
-        for(let y = 0;y < this.#height;y += 4,lines += '\n')
-            for(let x = 0;x < this.#width;x += 2)
-                lines += this.#renderBlock(x,y);
+        for(let y = 0;y < height;y += 4,lines += '\n')
+            for(let x = 0;x < width;x += 2)
+                lines += Braille.fromPixels(data,x,y);
 
         return lines;
-    }
-
-
-    #renderBlock ( x , y ){
-
-        const data = this.#data;
-
-        let char =
-            data[y + 0][x + 0] *   1 +
-            data[y + 1][x + 0] *   2 +
-            data[y + 2][x + 0] *   4 +
-            data[y + 0][x + 1] *   8 +
-            data[y + 1][x + 1] *  16 +
-            data[y + 2][x + 1] *  32 +
-            data[y + 3][x + 0] *  64 +
-            data[y + 3][x + 1] * 128 ;
-
-        return pixels[char];
     }
 
 
@@ -79,7 +65,7 @@ export default class Canvas {
         if( x >= this.#width )
             return;
 
-        if( y >= this.#width )
+        if( y >= this.#height )
             return;
 
         [ x , y ] = [ floor(x) , floor(y) ];
@@ -94,14 +80,17 @@ export default class Canvas {
 
     clear (){
 
-        const data = Array(this.#height)
-            .fill(null);
-
-        this.#data = data.map(() => {
-            return Array(this.#width)
+        const newColumn = () =>
+            Array(this.#width)
                 .fill(null)
-                .map(() => 0)
-        });
+                .map(() => 0);
+
+        const newGrid = () =>
+            Array(this.#height)
+                .fill(null)
+                .map(newColumn);
+
+        this.#data = newGrid();
     }
 
 
@@ -117,17 +106,12 @@ export default class Canvas {
 
     overlay ( X , Y , pixels ){
 
-        const
-            height = pixels.length ,
-            width = pixels[0]?.length ?? 0 ;
+        const [ width , height ] =
+            Grid.sizeOf(pixels);
 
-        for(let y = 0;y < height;y++){
-
-            const line = pixels[y];
-
-            for(let x = 0;x < width;x++)
+        for(let y = 0;y < height;y++)
+            for(let x = 0,line = pixels[y];x < width;x++)
                 this.pixel(X + x,Y + y,line[x]);
-        }
     }
 
 
@@ -151,34 +135,5 @@ export default class Canvas {
 
         for(const [ char , offset ] of combine(chars,offsets))
             this.overlay(x + offset,y,char)
-
-        // let offset = 0;
-        //
-        // for(const char of chars){
-        //     this.overlay(x + offset,y,char);
-        //     offset += (char[0]?.length ?? 0) + 2;
-        // }
-    }
-}
-
-
-function * combine ( A , B ){
-
-    if(Array.isArray(A))
-        A = A.values();
-
-    if(Array.isArray(B))
-        B = B.values();
-
-    let a , b ;
-
-    while (true){
-
-        [ a , b ] = [ A.next() , B.next() ];
-
-        if( a.done || b.done )
-            return;
-
-        yield [ a.value , b.value ];
     }
 }

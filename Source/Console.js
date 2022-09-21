@@ -17,3 +17,29 @@ export function pixelSize (){
 
     return [ width * 2 , height * 4 ]
 }
+
+
+export function onResize ( callback ){
+
+    let [ height , width ] = [ 0 , 0 ];
+
+    let id;
+
+    const listener = {
+        cancel : () =>
+            clearInterval(id)
+    }
+
+    id = setInterval(() => {
+
+        const [ w , h ] = pixelSize();
+
+        if(width === w && height === h)
+            return;
+
+        [ width , height ] = [ w , h ];
+
+        callback(listener);
+
+    },100);
+}

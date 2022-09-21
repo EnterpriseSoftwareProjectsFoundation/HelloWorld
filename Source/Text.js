@@ -1,4 +1,5 @@
 
+import * as Grid from './Grid.js'
 import Font from './Font.js'
 
 
@@ -38,7 +39,7 @@ export function heightOf ( text ){
     let height = 0;
 
     for(const char of asPixels(text))
-        height = max(height,char[0]?.length ?? 0);
+        height = max(height,Grid.heightOf(char));
 
     return height;
 }
@@ -51,16 +52,13 @@ export function heightOf ( text ){
 
 export function * charOffsets ( pixels ){
 
-    const widthOf = ( charmap ) =>
-        charmap[0]?.length ?? 0;
-
     let offset = 0;
 
     for(const charmap of pixels){
 
         yield offset;
 
-        offset += widthOf(charmap) + 2;
+        offset += Grid.widthOf(charmap) + 2;
     }
 
     yield offset - 2;

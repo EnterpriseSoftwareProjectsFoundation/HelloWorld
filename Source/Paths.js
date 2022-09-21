@@ -2,7 +2,9 @@
 import { fromFileUrl , dirname , join } from 'Path'
 
 
-const folder = dirname(fromFileUrl(import.meta.url));
+const { url } = import.meta ;
+
+const folder = dirname(fromFileUrl(url));
 
 
 export const project

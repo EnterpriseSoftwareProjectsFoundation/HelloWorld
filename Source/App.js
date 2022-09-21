@@ -15,22 +15,14 @@ const
     textHeight = heightOf(text) ;
 
 
-let
-    height = 0 ,
-    width = 0 ;
+Console.onResize(redraw);
 
-setInterval(() => {
 
-    const [ w , h ] = Console.pixelSize();
+function redraw ({ cancel }){
 
-    if(width === w && height === h)
-        return;
-
-    [ width , height ] = [ w , h ];
-
+    const [ width , height ] = Console.pixelSize();
 
     const canvas = new Canvas(width,height);
-
 
     const
         y = (height - textHeight) / 2 ,
@@ -40,7 +32,8 @@ setInterval(() => {
 
 
     const frame = canvas.render();
-    clear();
-    log(frame);
 
-},100);
+    clear();
+
+    log(frame);
+}
