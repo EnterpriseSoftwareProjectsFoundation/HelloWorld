@@ -1,8 +1,9 @@
 
-import { charOffsets , asPixels } from './Text.js'
-import * as Braille from './Braille.js'
-import { combine } from './Generator.js'
-import * as Grid from './Grid.js'
+import { charOffsets , asPixels } from 'Text'
+import { combine } from 'Generator'
+
+import * as Braille from 'Braille'
+import * as Grid from 'Grid'
 
 
 const { floor } = Math;

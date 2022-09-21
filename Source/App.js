@@ -1,7 +1,7 @@
 
-import { widthOf , heightOf } from './Text.js'
-import * as Console from './Console.js'
-import Canvas from './Canvas.js'
+import { widthOf , heightOf } from 'Text'
+import * as Console from 'Console'
+import Canvas from 'Canvas'
 
 
 const { log , clear } = console;

@@ -1,6 +1,5 @@
 
 
-
 export function widthOf ( grid ){
     return grid?.[0]?.length ?? 0;
 }

@@ -1,6 +1,6 @@
 
-import * as Grid from './Grid.js'
-import Font from './Font.js'
+import * as Grid from 'Grid'
+import Font from 'Font'
 
 
 const { max } = Math;

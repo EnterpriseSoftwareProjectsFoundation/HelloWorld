@@ -8,7 +8,7 @@ const folder = dirname(fromFileUrl(url));
 
 
 export const project
-     = join(folder,'..')
+     = join(folder,'..','..')
 
 export const data
      = join(project,'Data');

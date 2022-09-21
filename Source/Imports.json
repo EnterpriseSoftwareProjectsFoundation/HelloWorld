@@ -4,6 +4,13 @@
         "FileSystem" : "https://deno.land/std@0.156.0/fs/mod.ts" ,
         "Path" : "https://deno.land/std@0.156.0/path/mod.ts" ,
         
-        "Paths" : "./Paths.js"
+        "Generator" : "./Language/Generator.js" ,
+        "Console" : "./System/Console.js" ,
+        "Braille" : "./Render/Braille.js" ,
+        "Canvas" : "./Render/Canvas.js" ,
+        "Paths" : "./Resources/Paths.js" ,
+        "Font" : "./Resources/Font.js" ,
+        "Grid" : "./Render/Grid.js" ,
+        "Text" : "./Render/Text.js"
     }
 }
